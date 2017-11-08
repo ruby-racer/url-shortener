@@ -14,9 +14,7 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     if @link.save
-      redirect_to root_path,
-                  notice: "Please use<br/><b>http://UrlShortener.com/#{@link.id.to_s(16)}</b><br/>
-                            as short representation of <br/><b>#{@link.original_url}</b>"
+      redirect_to root_path, notice: view_context.notice_text(@link)
     else
       render :new
     end
