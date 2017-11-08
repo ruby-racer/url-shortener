@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To install all dependencies and run app you can use RVM and skip first paragraph
 
-Things you may want to cover:
+1. Install Ruby version ruby-2.4.1, all required gems
 
-* Ruby version
+2. System dependencies: Postgresql as database server, configure connection in config/database.yml
 
-* System dependencies
+3. Database creation: rake db:create
 
-* Configuration
+4. Database initialization: rake db:migrate
 
-* Database creation
+5. How to run the test suite: rake spec
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6. Run web server: rails s
